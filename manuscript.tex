@@ -1,0 +1,128 @@
+\documentclass[12pt,a4paper,openright,twoside]{article}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla, es-noshorthands]{babel}
+\usepackage[backend=biber, style=apa]{biblatex}
+\usepackage[labelfont=bf]{caption}
+\usepackage{rotating}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{titlesec}
+
+% Margins
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+
+% Add blankpages
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+% Add references
+\addbibresource{refs.bib}
+\setlength\bibitemsep{\baselineskip}
+
+% Small fonts for figures
+\captionsetup[figure]{font=small}
+
+% Table options
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}<{\vspace{0.2cm}}}
+\setlength{\extrarowheight}{6pt}
+\setlength{\aboverulesep}{1.5ex}
+\captionsetup[table]{justification=raggedright, singlelinecheck=false, labelfont=bf}
+
+% Shell code options
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour}, 
+    commentstyle=\color{black},     
+    keywordstyle=\color{black},     
+    numberstyle=\tiny\color{black}, 
+    stringstyle=\color{black},      
+    basicstyle=\color{black}\ttfamily\footnotesize,
+    keywords={},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    xleftmargin=0.2\textwidth,
+    xrightmargin=0.2\textwidth
+}
+
+\lstset{
+    style=mystyle,
+    language=bash,
+    xleftmargin=0.1\textwidth,
+    xrightmargin=0.1\textwidth
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black, 
+    citecolor=black, 
+    urlcolor=blue    
+}
+
+% Parts of the document
+\begin{document}
+\justifying 
+
+% Stop page numbering for preliminary sections
+\pagenumbering{gobble}
+
+\include{cover}
+\blankpage
+\include{declaration}
+\blankpage
+\include{abstract_spa}
+\blankpage
+\include{abstract_eng}
+\blankpage
+
+\tableofcontents
+
+\blankpage
+% Start page numbering
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{intro}
+\include{objetives}
+\blankpage
+\include{method}
+\include{results}
+\include{discussion}
+\blankpage
+\include{conclusions}
+
+\blankpage
+\printbibliography[heading=bibintoc, title={Referencias}]
+
+\blankpage
+\include{aditional}
+
+\end{document}
