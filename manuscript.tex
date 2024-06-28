@@ -94,13 +94,13 @@
 % Stop page numbering for preliminary sections
 \pagenumbering{gobble}
 
-\include{cover}
+\include{content/cover}
 \blankpage
-\include{declaration}
+\include{content/declaration}
 \blankpage
-\include{abstract_spa}
+\include{content/abstract_spa}
 \blankpage
-\include{abstract_eng}
+\include{content/abstract_eng}
 \blankpage
 
 \tableofcontents
@@ -110,19 +110,19 @@
 \clearpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
-\include{intro}
-\include{objetives}
+\include{content/intro}
+\include{content/objetives}
 \blankpage
-\include{method}
-\include{results}
-\include{discussion}
+\include{content/method}
+\include{content/results}
+\include{content/discussion}
 \blankpage
-\include{conclusions}
+\include{content/conclusions}
 
 \blankpage
 \printbibliography[heading=bibintoc, title={Referencias}]
 
 \blankpage
-\include{aditional}
+\include{content/aditional}
 
 \end{document}
