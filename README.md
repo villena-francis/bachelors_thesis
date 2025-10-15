@@ -1,5 +1,7 @@
 # Evolutionary and structural analysis of nsp10, nsp14 and nsp16 proteins for the design of a pancoronaviral antiviral therapy
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17358470.svg)](https://doi.org/10.5281/zenodo.17358470)
+
 During this century, there have been three global health alerts caused by the 
 emergence of new zoonotic coronaviruses that can cause acute respiratory 
 infections: SARS-CoV (2002), MERS-CoV (2012) and SARS-CoV-2 (2019). In response 
